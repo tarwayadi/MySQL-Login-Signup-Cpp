@@ -1,1 +1,25 @@
+-- SQL Commands to set up your MySQL Database and Table for the C++ User Authentication System
+
+-- 1. Create the database 'mydb'
+--    This command creates a new database named 'mydb' if it doesn't already exist.
+CREATE DATABASE IF NOT EXISTS mydb;
+
+-- 2. Select the 'mydb' database
+--    This command tells MySQL to use 'mydb' as the current database for subsequent operations.
+USE mydb;
+
+-- 3. Create the 'password' table with specified column details.
+--    - 'Id': Stores the user identifier. It's VARCHAR(20) and designated as PRIMARY KEY,
+--            which implicitly makes it NOT NULL.
+--    - 'PW': Stores the password. It's VARCHAR(20) and explicitly allows NULL values.
+--            (Note: While you requested a default of NULL for 'Id', a PRIMARY KEY column
+--            cannot have NULL values. Its default is implicitly handled by its PRIMARY KEY constraint.)
+CREATE TABLE IF NOT EXISTS password (
+    Id VARCHAR(20) PRIMARY KEY, -- Id cannot be NULL because it is a PRIMARY KEY
+    PW VARCHAR(20) NULL         -- PW can be NULL
+);
+
+-- Optional: To verify the table was created, you can run:
+DESCRIBE password;
+-- SHOW TABLES;
 
