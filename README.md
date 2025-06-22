@@ -71,7 +71,7 @@ Run the  SQL code written in sql_code in MySQL Workbench or Shell:
   For example:
   const char* PW = "MyRootPass123";
 
-### 7: Compile and Run
+### 6: Compile and Run
 
 - In Dev-C++, go to Execute > Compile & Run (or press F11).
 - If everything is set up correctly, the program will compile and display a console menu for login/signup.
