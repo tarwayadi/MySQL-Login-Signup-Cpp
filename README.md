@@ -34,35 +34,35 @@ This project demonstrates a basic user authentication system (Signup and Login) 
 Run the  SQL code written in sql_code in MySQL Workbench or Shell:
 
 
- 4: Configure Dev-C++ Project
+ ### 3: Configure Dev-C++ Project
 
 - Open Dev-C++.
 - Go to Project > Project Options (or press Alt + P).
 - Select the "Directories" tab.
 
-4.1 Configure Include Directories (Header Files)
+3.1 Configure Include Directories (Header Files)
 - Choose "C Include Directories".
 - Click the "New" button.
 - Browse to: C:\MySQL_C_Connector\mysql-connector-c-8.x.x-winx64\include
 
-4.2 Configure Library Directories (Library Files)
+3.2 Configure Library Directories (Library Files)
 - Choose "Library Directories".
 - Click the "New" button.
 - Browse to: C:\MySQL_C_Connector\mysql-connector-c-8.x.x-winx64\lib
 
-4.3 Configure Linker Settings
+3.3 Configure Linker Settings
 - Go to the "Parameters" tab.
 - Under "Linker", add: -lmysql or -lmysqlclient
 - Click OK to save changes.
 
- 5: Place the Runtime DLL
+ ### 4: Place the Runtime DLL
 
 - Locate libmysql.dll in either the 'lib' or 'bin' folder inside your extracted MySQL Connector/C directory.
 - Example: C:\MySQL_C_Connector\mysql-connector-c-8.x.x-winx64\lib\libmysql.dll
 - Copy this file.
 - Paste it in your Dev-C++ project folder (where your .exe will be generated).
 
- 6: Update MySQL Credentials in Code
+### 5: Update MySQL Credentials in Code
 
 - Open your main.cpp file.
 - Find the line:
@@ -71,7 +71,7 @@ Run the  SQL code written in sql_code in MySQL Workbench or Shell:
   For example:
   const char* PW = "MyRootPass123";
 
- 7: Compile and Run
+### 7: Compile and Run
 
 - In Dev-C++, go to Execute > Compile & Run (or press F11).
 - If everything is set up correctly, the program will compile and display a console menu for login/signup.
